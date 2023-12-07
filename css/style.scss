@@ -1,0 +1,201 @@
+$Black : #000000;
+$Oxford_Blue : #14213D;
+$Orange_Web : #FCA311;
+$Platinum : #E5E5E5;
+$White : #FFFFFF;
+$Space_Cadet : #1B2E55;
+
+@font-face {
+    font-family: Alata Regular;
+    src: url(../font/Alata-Regular.woff2);
+}
+
+html{
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: Alata Regular, sans-serif;
+}
+
+.w150{
+    width: 150px !important;
+}
+
+.platinum{
+    color: $Platinum;
+    &:hover{
+        color: $Platinum;
+    }
+}
+
+.space_cadet{
+    color: $Space_Cadet;
+    &:hover{
+        color: $Space_Cadet;
+    }
+}
+
+.orange_web{
+    color: $Orange_Web;
+    &:hover{
+        color: $Orange_Web;
+    }
+}
+
+.bg_black{
+    background-color: $Black;
+}
+
+.bg_oxford_blue{
+    background-color: $Oxford_Blue;
+}
+
+.bg_orange_web{
+    background-color: $Orange_Web;
+}
+
+.bg_platinum{
+    background-color: $Platinum;
+}
+
+.bg_white{
+    background-color: $White;
+}
+
+.bg_space_cadet{
+    background-color: $Space_Cadet;
+}
+
+.btn-oxford{
+    color: $Platinum !important;
+    background-color: $Oxford_Blue !important;
+    border-color: $Space_Cadet !important;
+    &:hover{
+        background-color: $Space_Cadet !important;
+        border-color: $Oxford_Blue !important;
+        color: $Platinum !important;
+    }
+}
+
+.disable{
+    display: none !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.active{
+    color: $Orange_Web !important;
+}
+
+.jump{
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-120%);
+    color: white;
+    text-decoration: none;
+    &:focus{
+        transform: translateY(0);
+    }
+}
+
+#header{
+    z-index: 10;
+    position: fixed;
+    top: -180px;
+    width: 100% !important;
+    display: block;
+    transition: top 0.5s;
+    border-bottom: 1px solid $Black;
+    .navbar-brand{
+        color: $Orange_Web;
+    }
+    .nav-link{
+        color: $Platinum;
+        &:hover{
+            color: $Orange_Web;
+            &::after{
+                width: 100%;
+            }
+        }
+        &::after{
+            content: '';
+            display: block;
+            background: $Orange_Web;
+            height: 1px;
+            width: 0;
+            margin: 3px auto 0;
+            transition: all 0.17s ease-in-out !important;
+        }
+    }
+}
+
+.brand{
+    color: $Space_Cadet;
+    span{
+        color: $Orange_Web;
+    }
+}
+
+.menu{
+    margin-top: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .nav-item{
+        color: $Platinum;
+        &:hover{
+            color: $Orange_Web;
+            &::after{
+                width: 100%;
+            }
+        }
+        &::after{
+            content: '';
+            display: block;
+            background: $Orange_Web;
+            height: 1px;
+            width: 0;
+            margin: 3px auto 0;
+            transition: all 0.17s ease-in-out !important;
+        }
+    }
+}
+
+.hero{
+    border-bottom: 1px solid $Oxford_Blue;
+}
+
+.post{
+    .title{
+        color: $Orange_Web;
+        font-size: 2vw;
+        &:hover{
+            color: $Oxford_Blue;
+        }
+    }
+    .info{
+        .author{
+            color: $Oxford_Blue;
+            &:hover{
+                color: $Orange_Web;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #header{
+        display: none;
+    }
+    .menu{
+        font-size: 3vw;
+    }
+}
